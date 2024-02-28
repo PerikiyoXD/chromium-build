@@ -225,6 +225,10 @@ template("msvc_toolchain") {
     } else {
       show_includes = "/showIncludes"
     }
+	
+	# Nulify please, stop console spam!
+	show_includes = ""
+
 
     tool("cc") {
       precompiled_header_type = "msvc"
